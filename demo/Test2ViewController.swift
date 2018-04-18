@@ -8,8 +8,13 @@
 
 import UIKit
 
+
 class Test2ViewController: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var reportButton: UIButton!
+    @IBOutlet weak var resultLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +26,38 @@ class Test2ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func report(_ sender: Any) {
+        view.endEditing(true)
+        guard let string = textView.text else {
+            return
+        }
+        guard let counts = countChar(string: string) else {
+            return
+        }
+        displayCountsAsString(counts: counts)
+    }
 
+    
+    func countChar(string: String) -> [Character: Int]? {
+        let arr = string
+        var counts: [Character: Int] = [:]
+        
+        for item in arr {
+            counts[item] = (counts[item] ?? 0) + 1
+        }
+        return counts
+    }
+    
+    func displayCountsAsString(counts: [Character: Int]) {
+        var total = 0
+        var string = "=========\n==Report==\n"
+        for (key, value) in counts {
+            string = "\(string)\(key): \(value)\n"
+            total = total + value
+        }
+        string = "\(string)Total Characters: \(total)"
+        resultLabel.text = string
+    }
     /*
     // MARK: - Navigation
 

@@ -27,6 +27,7 @@ class Test1ViewController: UIViewController {
     }
     
     @IBAction func find(_ sender: Any) {
+        view.endEditing(true)
         guard let string = textView.text else {
             return
         }
