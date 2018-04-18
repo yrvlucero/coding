@@ -27,17 +27,34 @@ class Test1ViewController: UIViewController {
     }
     
     @IBAction func find(_ sender: Any) {
-        guard let index = findA(string: textView.text) else {
+        guard let string = textView.text else {
+            return
+        }
+        if string.isEmpty {
+            resultLabel.text = "Empty String"
+            return
+        }
+        guard let index = findA(string: string, index: string.startIndex) else {
             resultLabel.text = "\(message) N/A"
             return
         }
         resultLabel.text = "\(message) \(index)"
     }
     
-    func findA(string: String) -> Int? {
-        let letter: Character = "a"
-        return string.index(of: letter)?.encodedOffset.advanced(by: 1)
+    func findA(string: String, index: String.Index) -> Int? {
+        let character: Character = "a"
+        if index == string.endIndex{
+            return nil
+        }
+        print(index.encodedOffset, string[index])
+        if string[index] ==  character {
+            return index.encodedOffset + 1
+        }else{
+            return findA(string: string, index: string.index(after: index))
+        }
     }
+    
+    
     
 }
 
