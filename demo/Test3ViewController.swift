@@ -9,7 +9,10 @@
 import UIKit
 
 class Test3ViewController: UIViewController {
-
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var calculateButton: UIButton!
+    @IBOutlet weak var resultLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +24,21 @@ class Test3ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func calculate(_ sender: Any) {
+        let double = calculateString(string: textView.text)
+        print(double)
+    }
+    
+    func calculateString(string: String) -> Double {
+        let expression = NSExpression(format: textView.text)
+        if let double = expression.expressionValue(with: nil, context: nil) as? Double {
+            return double
+        }else{
+            print("ERROR")
+        }
+        return 0.00
+    }
+    
     /*
     // MARK: - Navigation
 
