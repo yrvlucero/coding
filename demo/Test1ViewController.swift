@@ -46,7 +46,7 @@ class Test1ViewController: UIViewController {
         if index == string.endIndex{
             return nil
         }
-        print(index.encodedOffset, string[index])
+        
         if string[index] ==  character {
             return index.encodedOffset + 1
         }else{
