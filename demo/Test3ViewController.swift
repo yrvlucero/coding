@@ -27,43 +27,26 @@ class Test3ViewController: UIViewController {
     }
     
     @IBAction func calculate(_ sender: Any) {
-        let double = calculateString(string: textView.text)
+        if let message = calculateString(string: textView.text) {
+            resultLabel.text = message
+        }
     }
     
-    func calculateString(string: String) -> Callback<Dou> {
+    func calculateString(string: String) -> String? {
         let expression = Expression(string)
         var message = ""
         do {
             let result = try expression.evaluate()
-            return result
-        }catch {
-            let err: Expression.Error = error as! Expression.Error
-            switch  err {
-            case .undefinedSymbol:
-                message = "Syntax Error"
-                break
-            case .unexpectedToken:
-                message = "Syntax Error"
-                break
-            case .arityMismatch:
-                message = "Syntax Error"
-                break
-            case .arrayBounds:
-                message = "Syntax Error"
-                break
-            case .missingDelimiter:
-                message = "Syntax Error"
-                break
-            case .message:
-                message = "Syntax Error"
-                break
-            default:
-                print("ERROR", err.description)
-                break
+            if result.isInfinite {
+                message = "Division by Zero"
+                return message
             }
+            message = String(result)
+        }catch {
+            //TO DO: Handle errors based on requirements or specifications
+            message = "Syntax Error"
         }
-        resultLabel.text = message
-        return 0.0
+        return message
     }
     
     /*

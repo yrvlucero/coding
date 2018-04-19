@@ -54,7 +54,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.9485594630241394" green="0.79552692174911499" blue="0.7899060845375061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="psX-m1-fUd" firstAttribute="top" secondItem="ROA-Qu-uhL" secondAttribute="bottom" constant="7.5" id="AD5-Qw-G98"/>
                                             <constraint firstItem="gwO-yX-OmK" firstAttribute="top" secondItem="psX-m1-fUd" secondAttribute="bottom" constant="10" id="Gqe-P3-3FS"/>
@@ -92,7 +92,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Test 1" id="bV4-6h-qhJ" customClass="T"/>
+                    <tabBarItem key="tabBarItem" title="Test 1" id="bV4-6h-qhJ" customClass="T">
+                        <color key="badgeColor" red="0.9485594630241394" green="0.79552692174911499" blue="0.7899060845375061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="findButton" destination="psX-m1-fUd" id="2Ny-uz-99j"/>
                         <outlet property="resultLabel" destination="gwO-yX-OmK" id="C3M-lp-LBY"/>
@@ -167,7 +169,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.72638565301895142" green="0.81365984678268433" blue="0.93844300508499146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="nZe-ly-xZc" firstAttribute="height" secondItem="PGZ-9L-bPY" secondAttribute="height" multiplier="0.125" id="3jY-sb-px8"/>
                                             <constraint firstItem="3Qc-S4-4I8" firstAttribute="centerX" secondItem="5HB-HM-qVc" secondAttribute="centerX" id="4pb-ke-Ul1"/>
@@ -205,7 +207,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TZe-Nk-4gh"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Test 2" id="Xop-ob-6d8" customClass="T"/>
+                    <tabBarItem key="tabBarItem" title="Test 2" id="Xop-ob-6d8" customClass="T">
+                        <color key="badgeColor" red="0.72638565301895142" green="0.81365984678268433" blue="0.93844300508499146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="reportButton" destination="5HB-HM-qVc" id="p4c-Hz-pQ8"/>
                         <outlet property="resultLabel" destination="3Qc-S4-4I8" id="JcK-lS-nAW"/>
@@ -260,7 +264,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.94949382543563843" green="0.943450927734375" blue="0.80150431394577026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="rI2-pl-rdw" firstAttribute="height" secondItem="kix-2O-S8k" secondAttribute="height" multiplier="0.125" id="DfQ-8t-NhS"/>
                                             <constraint firstItem="rvy-X2-mnq" firstAttribute="width" secondItem="ZHl-xh-eyq" secondAttribute="width" id="IKe-tJ-0Vv"/>
@@ -298,7 +302,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gQT-t6-VM9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Test 3" id="bgL-BG-KJb" customClass="T"/>
+                    <tabBarItem key="tabBarItem" title="Test 3" id="bgL-BG-KJb" customClass="T">
+                        <color key="badgeColor" red="0.94949382543563843" green="0.943450927734375" blue="0.80150431394577026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="calculateButton" destination="ZHl-xh-eyq" id="edH-Z1-nco"/>
                         <outlet property="resultLabel" destination="rvy-X2-mnq" id="dzD-r2-Xzo"/>
