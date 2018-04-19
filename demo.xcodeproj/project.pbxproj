@@ -17,6 +17,7 @@
 		765B79982086B2A000A5D2D2 /* demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765B79972086B2A000A5D2D2 /* demoUITests.swift */; };
 		765B79A62086B53500A5D2D2 /* Test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765B79A52086B53500A5D2D2 /* Test2ViewController.swift */; };
 		765B79A82086B54A00A5D2D2 /* Test3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765B79A72086B54A00A5D2D2 /* Test3ViewController.swift */; };
+		76E484932088485F005B7BFF /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E484922088485E005B7BFF /* Callback.swift */; };
 		C215E9E284D14D930C1CC696 /* Pods_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A881F2C8797A028CEA33797 /* Pods_demo.framework */; };
 		CF1FD2E9EC826F27EA285301 /* Pods_demoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F10393E2CD2DD86F49DD0A /* Pods_demoUITests.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		765B79992086B2A000A5D2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		765B79A52086B53500A5D2D2 /* Test2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2ViewController.swift; sourceTree = "<group>"; };
 		765B79A72086B54A00A5D2D2 /* Test3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test3ViewController.swift; sourceTree = "<group>"; };
+		76E484922088485E005B7BFF /* Callback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
 		7F415C0973D3F3F084F7DA01 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
 		9F862EE881B44011721ECC1F /* Pods_demoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CFCD0D0C5E7ADF567FBC0F /* Pods-demoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-demoUITests/Pods-demoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				765B79792086B27800A5D2D2 /* Test1ViewController.swift */,
 				765B79A52086B53500A5D2D2 /* Test2ViewController.swift */,
 				765B79A72086B54A00A5D2D2 /* Test3ViewController.swift */,
+				76E484922088485E005B7BFF /* Callback.swift */,
 				765B797B2086B27800A5D2D2 /* Main.storyboard */,
 				765B797E2086B29F00A5D2D2 /* Assets.xcassets */,
 				765B79802086B29F00A5D2D2 /* LaunchScreen.storyboard */,
@@ -381,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E484932088485F005B7BFF /* Callback.swift in Sources */,
 				765B797A2086B27800A5D2D2 /* Test1ViewController.swift in Sources */,
 				765B79A62086B53500A5D2D2 /* Test2ViewController.swift in Sources */,
 				765B79A82086B54A00A5D2D2 /* Test3ViewController.swift in Sources */,
@@ -562,7 +566,10 @@
 				DEVELOPMENT_TEAM = 5SVL6S654Z;
 				INFOPLIST_FILE = demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = test.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -579,7 +586,10 @@
 				DEVELOPMENT_TEAM = 5SVL6S654Z;
 				INFOPLIST_FILE = demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = test.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -595,7 +605,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = demoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = test.demoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -612,7 +626,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = demoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = test.demoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -628,7 +646,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = demoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = test.demoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -644,7 +666,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = demoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = test.demoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Expression
+
 
 class Test3ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
@@ -15,10 +17,10 @@ class Test3ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -26,27 +28,52 @@ class Test3ViewController: UIViewController {
     
     @IBAction func calculate(_ sender: Any) {
         let double = calculateString(string: textView.text)
-        print(double)
     }
     
-    func calculateString(string: String) -> Double {
-        let expression = NSExpression(format: textView.text)
-        if let double = expression.expressionValue(with: nil, context: nil) as? Double {
-            return double
-        }else{
-            print("ERROR")
+    func calculateString(string: String) -> Callback<Dou> {
+        let expression = Expression(string)
+        var message = ""
+        do {
+            let result = try expression.evaluate()
+            return result
+        }catch {
+            let err: Expression.Error = error as! Expression.Error
+            switch  err {
+            case .undefinedSymbol:
+                message = "Syntax Error"
+                break
+            case .unexpectedToken:
+                message = "Syntax Error"
+                break
+            case .arityMismatch:
+                message = "Syntax Error"
+                break
+            case .arrayBounds:
+                message = "Syntax Error"
+                break
+            case .missingDelimiter:
+                message = "Syntax Error"
+                break
+            case .message:
+                message = "Syntax Error"
+                break
+            default:
+                print("ERROR", err.description)
+                break
+            }
         }
-        return 0.00
+        resultLabel.text = message
+        return 0.0
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
