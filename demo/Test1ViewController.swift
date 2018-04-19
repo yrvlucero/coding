@@ -18,6 +18,8 @@ class Test1ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -55,7 +57,13 @@ class Test1ViewController: UIViewController {
         }
     }
     
+}
+
+extension UIViewController {
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
 }
 

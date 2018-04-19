@@ -1,16 +1,16 @@
 PODS:
-  - Expression (0.9.3)
+  - DDMathParser (2.0.0)
 
 DEPENDENCIES:
-  - Expression
+  - DDMathParser
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - Expression
+    - DDMathParser
 
 SPEC CHECKSUMS:
-  Expression: 295319d9d68354da1bdc265c17639f0670127aa8
+  DDMathParser: 74cddd0aa652cfed79e68fdd076f1ee63ab43a16
 
-PODFILE CHECKSUM: 441eac5a130a6431db40f0f20f6c3d379f2a7ca7
+PODFILE CHECKSUM: 86cd77593b895ca4b34de20e64d1c21916e2c61d
 
 COCOAPODS: 1.5.0
