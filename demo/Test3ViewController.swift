@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Expression
 
 
 class Test3ViewController: UIViewController {
@@ -34,24 +34,24 @@ class Test3ViewController: UIViewController {
     }
     
     func calculateString(string: String) -> String? {
-//        let expression = Expression(string)
-//        var message = ""
-//        do {
-//            let result = try expression.evaluate()
-//            if result.isInfinite {
-//                message = "Division by Zero"
-//                return message
-//            }
-//            let formatter = NumberFormatter()
-//            formatter.minimumFractionDigits = 0
-//            formatter.maximumFractionDigits = 10
-//            message = formatter.string(from: NSNumber(floatLiteral: result)) ?? "N/A"
-//        }catch {
-//            //TO DO: Handle errors based on requirements or specifications
-//            print("ERROR", error.localizedDescription)
-//            message = "Syntax Error"
-//        }
-//        return message
+        let expression = Expression(string)
+        var message = ""
+        do {
+            let result = try expression.evaluate()
+            if result.isInfinite {
+                message = "Division by Zero"
+                return message
+            }
+            let formatter = NumberFormatter()
+            formatter.minimumFractionDigits = 0
+            formatter.maximumFractionDigits = 10
+            message = formatter.string(from: NSNumber(floatLiteral: result)) ?? "N/A"
+        }catch {
+            //TO DO: Handle errors based on requirements or specifications
+            print("ERROR", error.localizedDescription)
+            message = "Syntax Error"
+        }
+        return message
         return ""
     }
     

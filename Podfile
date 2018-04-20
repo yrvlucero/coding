@@ -6,7 +6,7 @@ target 'demo' do
   use_frameworks!
 
   # Pods for demo
-  pod 'DDMathParser'
+  pod 'Expression',
   
   target 'demoTests' do
     inherit! :search_paths
