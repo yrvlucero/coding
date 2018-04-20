@@ -46,11 +46,9 @@ class Test3ViewController: UIViewController {
             message = String(result) ?? "N/A"
         }catch {
             //TO DO: Handle errors based on requirements or specifications
-            print("ERROR", error.localizedDescription)
             message = "Syntax Error"
         }
         return message
-        return ""
     }
     
     /*
